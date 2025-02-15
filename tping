@@ -1,0 +1,23 @@
+# tping v1 (time ping)
+
+#You can use this script by simply typing tping into the terminal, as long as the script is in a folder
+#named bin in your home folder. It will then ask you for the hostname or IP address.
+#and will then ping that host whilst putting a timestamp next to each individual ping response.
+
+#One really great way to use this tool is, if a device is offline, you can tping that device, and
+#then once it becomes reachable, the timestamp will be there for you to see exactly when it began
+#responding to pings.  
+
+
+
+echo
+echo -=-  Welcome to tping! -=-
+echo
+echo Paste or type the IP or hostname you would like to ping:
+
+read site
+
+echo Attempting to connect.....Press ctrl+c to quit
+
+### ping $site | while read pong; do echo "$(TZ="EST" date): $pong"; done
+ping $site | while read pong; do echo "$(TZ='America/New_York' date): $pong"; done
