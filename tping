@@ -21,3 +21,5 @@ echo Attempting to connect.....Press ctrl+c to quit
 
 ### ping $site | while read pong; do echo "$(TZ="EST" date): $pong"; done
 ping $site | while read pong; do echo "$(TZ='America/New_York' date): $pong"; done
+
+# We could do pings a little faster using ping -i 1 (1 second intervals)
