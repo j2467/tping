@@ -1,4 +1,4 @@
-# t(imestamp)ping
+#tping
 
 Simple script to ping a device with a timestamp next to each ping attempt.
 
